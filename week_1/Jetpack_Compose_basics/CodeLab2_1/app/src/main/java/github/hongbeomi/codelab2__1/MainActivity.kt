@@ -24,6 +24,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import github.hongbeomi.codelab2__1.ui.theme.CodeLab2_1Theme
+import github.hongbeomi.codelab2__1.ui.widget.ScrollingList
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +32,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CodeLab2_1Theme {
                 Surface(color = MaterialTheme.colors.background) {
-                    PhotographerCard()
+                    ScrollingList()
                 }
             }
         }
@@ -73,41 +74,5 @@ fun PhotographerCard(modifier: Modifier = Modifier) {
 fun PhotographerCardPreview() {
     CodeLab2_1Theme {
         PhotographerCard()
-    }
-}
-
-@Composable
-fun LayoutsCodelab() {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(text = "LayoutsCodelab")
-                },
-                actions = {
-                    IconButton(onClick = { /*TODO*/ }) {
-                        Icon(Icons.Filled.Favorite, contentDescription = null)
-                    }
-                }
-            )
-        }
-    ) { innerPadding ->
-        BodyContent(Modifier.padding(innerPadding).padding(8.dp))
-    }
-}
-
-@Composable
-fun BodyContent(modifier: Modifier = Modifier) {
-    Column(modifier) {
-        Text(text = "Hi there")
-        Text(text = "Thanks for going through the Layouts codelab")
-    }
-}
-
-@Preview
-@Composable
-fun LayoutsCodelabPreview() {
-    CodeLab2_1Theme {
-        LayoutsCodelab()
     }
 }
