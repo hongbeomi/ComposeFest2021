@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/week 3-3-Jetpack-Compose-Navigation.iml" filepath="$PROJECT_DIR$/.idea/modules/week 3-3-Jetpack-Compose-Navigation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Rally.iml" filepath="$PROJECT_DIR$/.idea/modules/Rally.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Rally.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Rally.app.iml" />
     </modules>
   </component>
 </project>
