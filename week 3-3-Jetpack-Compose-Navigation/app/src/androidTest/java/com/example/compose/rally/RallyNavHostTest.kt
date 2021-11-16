@@ -7,7 +7,7 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import junit.framework.Assert.assertEquals
+import org.junit.Assert.assertEquals
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
@@ -19,7 +19,7 @@ class RallyNavHostTest {
 
     @get:Rule
     val composeTestRule = createComposeRule()
-    lateinit var navController: NavHostController
+    private lateinit var navController: NavHostController
 
     @Before
     fun setupRallyNavHost() {
