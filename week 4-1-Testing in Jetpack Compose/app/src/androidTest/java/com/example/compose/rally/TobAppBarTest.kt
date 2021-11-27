@@ -65,4 +65,35 @@ class TobAppBarTest {
             .assertExists()
     }
 
+    @Test
+    fun rallyTopAppBarTest_changesTabWhenSelected() {
+        composeTestRule.setContent {
+            RallyApp()
+        }
+        composeTestRule.onRoot(useUnmergedTree = true).printToLog("changesTabWhenSelected")
+
+        // initial
+        composeTestRule
+            .onNodeWithContentDescription(RallyScreen.Overview.name)
+            .assertIsSelected()
+
+        // select account tab
+        composeTestRule
+            .onNodeWithContentDescription(RallyScreen.Accounts.name)
+            .performClick()
+            .assertIsSelected()
+
+        // select bills tab
+        composeTestRule
+            .onNodeWithContentDescription(RallyScreen.Bills.name)
+            .performClick()
+            .assertIsSelected()
+
+        // select overview tab
+        composeTestRule
+            .onNodeWithContentDescription(RallyScreen.Overview.name)
+            .performClick()
+            .assertIsSelected()
+    }
+
 }
